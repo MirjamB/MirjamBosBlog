@@ -1,0 +1,68 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-image: url("HeaderFrontPage.jpg");
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+h1 { 
+    color: black;
+    font-size: 90px;  
+    font-weight: 120;
+    background-color: #A8C3D6;
+    font-family: "Miss Fajardose";
+    }
+
+h2 {
+    color: black;
+    font-size: 20px;
+    font-weight: 100;
+    font-family: "Playfair Display";
+}
+h3 {
+    color: black;
+    font-family: 'Open Sans';
+    text-align: center;
+    font-size: 18px;
+    background-color: #A8C3D6;
+    padding: 10px 0px;
+    font-weight: 100;
+    }
+
+p {
+    color: black;
+    font-family: 'Open Sans';
+    font-size: 18px;
+}
+
+.navbar{
+    width: 100%;
+    overflow: auto;
+}
+
+.navbar a{
+    float: left;
+    padding: 0;
+    color:black;
+    font-family: 'Open Sans';
+    text-decoration: none;
+    width: 25%;
+    text-align: center;
+}
+
+.navbar a:hover{
+    background-color: #A8C3D6;
+}
+
+@media screen and (max-width: 500px) {
+    .navbar a{
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+}
