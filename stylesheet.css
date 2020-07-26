@@ -65,6 +65,12 @@ h3 {
 .row {
     display: flex;
     flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
 }
 
 /* Create two unequal columns that sits next to each other*/
@@ -87,10 +93,9 @@ h3 {
     }
 }
 
-/*
+
 @media screen and (min-width: 992px) {
-    .navbar {
-        width:992px;
+    .row {
+        max-width: 992px;
     }
 }
-*/
