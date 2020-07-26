@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+body {
+    color: black;
+    font-family: 'Open Sans';
+    font-size: 14px;
+}
+
+/* Style the header */
 header {
     background-image: url("HeaderFrontPage.jpg");
     text-align: center;
@@ -20,7 +27,7 @@ h1 {
 
 h2 {
     color: black;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 100;
     font-family: "Playfair Display";
 }
@@ -34,44 +41,56 @@ h3 {
     font-weight: 100;
     }
 
-p {
-    color: black;
-    font-family: 'Open Sans';
-    font-size: 18px;
-}
 
+/* Style de navigatiebar */
 .navbar{
-    width: 100%;
-    overflow: auto;
+    display:flex;
+    justify-content: center;
 }
 
 .navbar a{
-    float: left;
     color:black;
-    font-family: 'Open Sans';
     text-decoration: none;
-    width: 25%;
-    padding: 10px;
+    padding: 14px 20px;
     text-align: center;
 }
 
+/* Change color on hover */
 .navbar a:hover{
-    background-color: #A8C3D6;
+    background-color: #EAEEEA;
+}
+
+
+/* Column container */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other*/
+/* Main column */
+.main{
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+
+.rigth{
+    flex: 30%;
+    background-color: white;
+    padding: 20px;
 }
 
 @media screen and (max-width: 500px) {
-    .navbar a{
-        float: none;
-        display: block;
-        width: 100%;
-        text-align: left;
+    .row, .navbar {
+        flex-direction: column;
     }
 }
 
+/*
 @media screen and (min-width: 992px) {
     .navbar {
         width:992px;
-        margin-left: auto;
-        margin-right: auto;
     }
 }
+*/
