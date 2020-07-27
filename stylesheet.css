@@ -14,8 +14,14 @@ body {
 header {
     background-image: url("HeaderFrontPage.jpg");
     text-align: center;
-    padding-top: 100px;
+    padding-top: 75px;
     padding-bottom: 50px;
+    height: 275px;
+}
+
+/* andere header afbeelding voor de OverMij pagina */
+#OverMij {
+    background-image: url("HeaderOverMij.jpg");
 }
 h1 { 
     color: black;
@@ -103,6 +109,19 @@ h3 {
     flex: 30%;
     background-color: white;
     padding: 20px;
+}
+
+.half{
+    flex: 50%;
+    background-color: white;
+    padding:10px;
+    margin-top: auto; 
+    margin-bottom: auto;
+}
+
+.couple{
+    border-top: 1px solid #8c8b8b;
+    border-bottom: 1px  solid #8c8b8b;
 }
 
 /* Make category border above article */
