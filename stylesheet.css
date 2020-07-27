@@ -99,20 +99,22 @@ h3 {
 }
 
 /* Make category border above article */
-hr.double {
+.category {
     border: none;
-	border-top: 4px double #8c8b8b;
+    border-top: 8px double #8c8b8b;
+    border-width: thick;
 	text-align: center;
 }
-hr.double:after {
-	content: 'Geloof';
-	display: inline-block;
-	position: relative;
-	top: -15px;
-	padding: 0 10px;
-	background: white;
-	color: #8c8b8b;
-	font-size: 18px;
+
+.category a{
+    background-color: white;
+    display: inline-block;
+    position: relative;
+    top: -12px;
+    padding: 0 10px;
+    text-decoration: none;
+    color: #8c8b8b;
+    font-size: 14px;
 }
 
 /* Adjustments for small screens */

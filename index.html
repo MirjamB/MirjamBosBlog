@@ -7,6 +7,7 @@
         <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'> <!-- Lettertype tekst-->
         <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'> <!-- Lettertype subkoppen-->
     
+        <script src="CountDown.js"></script>
         <meta charset = "UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -28,20 +29,25 @@
 <div class="container">
 <div class="row">
     <div class="main">
-        <hr class="double">
+        <div class="category">
+            <a href="#"> Boeken </a>
+        </div>
+        <img src="VoorbeeldLiggend.jpeg" alt="Nachtkastje" style=width:100%;>
         <h2>Blog title</h2>
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
         <br>
-        <hr class="double">
-    <h2>Blog title post 2</h2>
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-   
+        <div class="category">
+            <a href="#">Geloof </a>
+        </div>
+        <h2>Blog title post 2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>  
     </div>
+
     <div class="side">
         <img src="ProfielFoto.jpg" style="width:100%; border-radius: 50%; max-width: 290px;">
         <h1 style="background-color: white; font-size:24;">Welkom</h1>
         <p>Heee, Mirjam hier! Wat leuk dat je een kijkje neemt op mijn website. Je leest hier allerlei artikelen over dingen die ik leuk vindt. Uiteenlopend van mijn hardloopdoelen en trainingsplan tot mijn nieuwste creatieve projecten en favoriete boeken. Verder kan je meer vinden over wie ik ben en stuur me een berichtje als je dat leuk vindt!</p>
-        <p class="countdown">Nog 5 uur en dhalghekljgkel jvlejvmenf lejlkgjlen</p>
+        <p id="demo"></p>
      </div>
   </div>
 </div>
