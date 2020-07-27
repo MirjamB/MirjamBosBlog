@@ -18,21 +18,21 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  var dag = "dagen ";
-  var week = "weken ";
+  var dag = " dagen, ";
+  var week = " weken, ";
   if (days ===1){
-      dag = "dag "
+      dag = " dag, "
   }
   if (weeks ===1){
-      week = "week ";
+      week = " week, ";
   }
 
-  document.getElementById("demo").innerHTML = weeks + week + days + dag + hours + "uur "
-  + minutes + "min " + seconds + "sec ";
+  document.getElementById("countdown").innerHTML = weeks + week  + days + dag + hours + " uur, \n " + 
+  + minutes + " min, " + " en " + seconds + " sec ";
   
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "Volbracht!";
+    document.getElementById("countdown").innerHTML = "Volbracht!";
   }
 }, 1000);
