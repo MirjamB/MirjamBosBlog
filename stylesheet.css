@@ -61,16 +61,27 @@ h3 {
 }
 
 
-/* Column container */
+/* coutdown */
+.countdown {
+    display:inline-block;
+    margin:5% auto;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    padding:1em;
+    line-height:1.5em;
+    background:#EAEEEA;
+    border:solid 5px #A8C3D6;
+}
+
+/* row container */
+.container {
+    display: flex;
+    justify-content: center;
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;
     max-width: 100%;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
 }
 
 /* Create two unequal columns that sits next to each other*/
@@ -87,13 +98,31 @@ h3 {
     padding: 20px;
 }
 
+/* Make category border above article */
+hr.double {
+    border: none;
+	border-top: 4px double #8c8b8b;
+	text-align: center;
+}
+hr.double:after {
+	content: 'Geloof';
+	display: inline-block;
+	position: relative;
+	top: -15px;
+	padding: 0 10px;
+	background: white;
+	color: #8c8b8b;
+	font-size: 18px;
+}
+
+/* Adjustments for small screens */
 @media screen and (max-width: 500px) {
     .row, .navbar {
         flex-direction: column;
     }
 }
 
-
+ /* Adjustements for wide screens */
 @media screen and (min-width: 992px) {
     .row {
         max-width: 992px;
