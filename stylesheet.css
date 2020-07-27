@@ -23,6 +23,7 @@ header {
 #OverMij {
     background-image: url("HeaderOverMij.jpg");
 }
+
 h1 { 
     color: black;
     font-size: 90px;  
@@ -47,6 +48,11 @@ h3 {
     font-weight: 100;
     }
 
+h4 {
+    font-family: 'Open Sans';
+    font-size: 12px;
+    color: gray
+}
 
 /* Style de navigatiebar */
 .navbar{
@@ -143,16 +149,47 @@ h3 {
     font-size: 14px;
 }
 
+/* Alle benodigde opmaak voor de over mij pagina */
+.rowOM {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.columnOM {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.columnOM img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
 /* Adjustments for small screens */
 @media screen and (max-width: 500px) {
     .row, .navbar {
         flex-direction: column;
     }
-}
 
+    .columnOM {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 800px){
+    .columnOM{
+        flex: 50%;
+        max-width: 50%;
+    }
+}
  /* Adjustements for wide screens */
 @media screen and (min-width: 992px) {
     .row {
         max-width: 992px;
+    }
+
+    .columnOM{
+        max-width:248px;
     }
 }
