@@ -1,26 +1,18 @@
 <template>
-  <div id="app">
-    <blog-header></blog-header>
+  <div>
+    <!-- hier wil ik altijd een header -->
     <navbar></navbar>
-    <blog-posts></blog-posts>
-    <footer> 
-      <p> Dit is tekst voor de footer </p>
-    </footer> 
-
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import BlogPost from './components/BlogPost.vue'
-import BlogHeader from './components/Header.vue'
 import NavBar from './components/NavBar.vue'
 
 export default {
   name: 'App',
   components: {
-    'blog-posts': BlogPost,
-    'blog-header': BlogHeader,
-    'navbar': NavBar,
+    'navbar': NavBar
   }
 }
 </script>

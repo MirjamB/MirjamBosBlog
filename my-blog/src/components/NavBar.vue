@@ -1,12 +1,18 @@
 <template>
     <div class="navbar">
-        <button> Home </button>
+        <button> <router-link to="/"> Home </router-link></button>
         <button> Categoriën </button>
-        <button> Over mij </button>
+        <button> <router-link to="/aboutme"> Over mij </router-link></button>
         <button> Contact </button>
     </div>
 </template>
 
+<script>
+export default {
+    
+}
+
+</script>
 <style scoped>
 .navbar{
     display:flex;
