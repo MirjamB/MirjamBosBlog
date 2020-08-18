@@ -1,18 +1,21 @@
 <template>
   <div>
-    <!-- hier wil ik altijd een header -->
+    <blog-header></blog-header>
     <navbar></navbar>
+    <br>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
 import NavBar from './components/NavBar.vue'
+import HeaderBlog from './components/Header.vue'
 
 export default {
   name: 'App',
   components: {
-    'navbar': NavBar
+    'navbar': NavBar,
+    'blog-header': HeaderBlog
   }
 }
 </script>

@@ -31,4 +31,9 @@ export default {
 .navbar button:hover{
     background-color: #EAEEEA;
 }
+
+.navbar button a{
+    text-decoration: none;
+    color: black;
+}
 </style>
