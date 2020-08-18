@@ -55,6 +55,11 @@ h1 {
     font-size: 24px;
     font-weight: 100;
     font-family: "Playfair Display";
+    padding: 10px 5px;
+}
+
+p {
+  padding: 0px 5px;
 }
 
 body {
