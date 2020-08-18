@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <blog-header></blog-header>
+    <navbar></navbar>
     <blog-posts></blog-posts>
     <footer> 
       <p> Dit is tekst voor de footer </p>
@@ -12,12 +13,14 @@
 <script>
 import BlogPost from './components/BlogPost.vue'
 import BlogHeader from './components/Header.vue'
+import NavBar from './components/NavBar.vue'
 
 export default {
   name: 'App',
   components: {
     'blog-posts': BlogPost,
     'blog-header': BlogHeader,
+    'navbar': NavBar,
   }
 }
 </script>
@@ -33,7 +36,6 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 
