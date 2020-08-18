@@ -1,13 +1,7 @@
 <template>
   <div id="app">
-    <header> 
-      <h1> Mirjam Bos </h1>
-    </header>
-
-    <!-- Hier komen de blogposts --> 
-    <div>
-      <blog-posts></blog-posts>
-    </div>
+    <blog-header></blog-header>
+    <blog-posts></blog-posts>
     <footer> 
       <p> Dit is tekst voor de footer </p>
     </footer> 
@@ -17,22 +11,52 @@
 
 <script>
 import BlogPost from './components/BlogPost.vue'
+import BlogHeader from './components/Header.vue'
 
 export default {
   name: 'App',
   components: {
     'blog-posts': BlogPost,
+    'blog-header': BlogHeader,
   }
 }
 </script>
 
 <style>
+*, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Miss+Fajardose&family=Open+Sans:wght@300&family=Playfair+Display:ital,wght@1,500&display=swap');
+
+
+#blog-header {
+    background-image: url("./images/HeaderFrontPage.jpg");
+    text-align: center;
+    padding-top: 75px;
+    padding-bottom: 50px;
+    height: 275px;
+}
+
+h1 {
+    color: black;
+    font-size: 24px;
+    font-weight: 100;
+    font-family: "Playfair Display";
+}
+
+body {
+    font-family: 'Open Sans';
+    font-size: 14px;
 }
 </style>
