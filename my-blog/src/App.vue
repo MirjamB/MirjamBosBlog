@@ -4,6 +4,8 @@
     <navbar></navbar>
     <br>
     <router-view></router-view>
+    <footer> Hallo dit is en footer </footer>
+
   </div>
 </template>
 
@@ -36,14 +38,6 @@ export default {
 
 @import url('https://fonts.googleapis.com/css2?family=Miss+Fajardose&family=Open+Sans:wght@300&family=Playfair+Display:ital,wght@1,500&display=swap');
 
-
-#blog-header {
-    background-image: url("./images/HeaderFrontPage.jpg");
-    text-align: center;
-    padding-top: 75px;
-    padding-bottom: 50px;
-    height: 275px;
-}
 
 h1 {
     color: black;
