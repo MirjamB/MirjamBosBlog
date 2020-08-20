@@ -4,7 +4,7 @@
     <navbar></navbar>
     <br>
     <router-view></router-view>
-    <footer> Hallo dit is en footer </footer>
+    <blog-footer></blog-footer>
 
   </div>
 </template>
@@ -12,12 +12,14 @@
 <script>
 import NavBar from './components/NavBar.vue'
 import HeaderBlog from './components/Header.vue'
+import FooterBlog from './components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
     'navbar': NavBar,
-    'blog-header': HeaderBlog
+    'blog-header': HeaderBlog,
+    'blog-footer': FooterBlog,
   }
 }
 </script>
@@ -55,4 +57,6 @@ body {
     font-family: 'Open Sans';
     font-size: 14px;
 }
+
+
 </style>

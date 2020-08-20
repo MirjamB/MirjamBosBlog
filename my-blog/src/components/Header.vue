@@ -1,7 +1,7 @@
 <template>
     <div id="blog-header" v-bind:style = "headerImg" >
         <span id="title" v-bind:style = "headerStyle"> {{ title }} </span>
-        <span id="subtitle"> {{ subtitle }}</span>
+        <span id="subtitle" v-bind:style = "headerStyle"> {{ subtitle }}</span>
     </div>
 </template>
 
@@ -13,7 +13,7 @@ export default {
            subtitle: '',
            imgSrc: require('@/assets/HeaderFrontPage.jpg'),
            headerStyle: {
-               background: 'red', 
+               background: '#A8C3D6', 
            },
            
 
@@ -36,15 +36,15 @@ export default {
         loadHeader: function(){
             if(this.$route.path == "/"){
                 this.title = 'Mirjam Bos',
-                this.subtitle = 'De blog over hardlopen, lekker eten, geloof en meer van mij!',
-                this.headerStyle.background = 'blue',
+                this.subtitle = 'De blog over sport, lekker eten, creativiteit en meer van mij!',
+                this.headerStyle.background = '#A8C3D6',
                 this.imgSrc = require('@/assets/HeaderFrontPage.jpg')
 
             } else if (this.$route.path == "/aboutme"){
                 this.title = 'Over mij',
                 this.subtitle = ''
-
-                
+                this.headerStyle.background = '#ED7250',
+                this.imgSrc = require('@/assets/HeaderOverMij.jpg')
             } else {
                 this.title = '404 Page not found'
             }
@@ -54,18 +54,6 @@ export default {
     mounted: function(){
         this.loadHeader();
     }
-    //computed: {
-    //    title: function(){
-      //      if (this.$route.path == "/aboutme"){
-        //        return 'Over Mij'
-          //  } else if (this.$route.path == "/") {
-            //    return 'Mirjam Bos'
-           // } else {
-             //   return 'Deze pagina bestaat niet'
-           // }
-       // }
-    //}
-    // Dit kan nog efficienter met watch. Dan kijk je naar this.route.path en laat je een functie uitvoeren als die veranderd. Variabelen dan nog aanmaken in data
 }
 
 </script>
@@ -75,7 +63,6 @@ export default {
 
 <style>
 #blog-header {
-    /*background-image: url("../assets/HeaderFrontPage.jpg");*/
     text-align: center;
     padding-top: 75px;
     padding-bottom: 50px;

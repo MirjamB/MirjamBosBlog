@@ -8,7 +8,8 @@
                 <img :src= "post.img" style = "width:100%" alt="loading...">
             </div>
             <h1> {{post.title}} </h1>
-            <p> {{post.text}} </p>
+            <p v-if='short'> {{ post.summary }} </p>
+            <p v-else> {{post.text}} </p>
             <p class="date"> {{post.date}} </p>
             <br>
             
@@ -18,6 +19,7 @@
 
 <script>
 export default {
+    props: ['short'],
     data() {
         return {
             posts: [{
@@ -37,7 +39,8 @@ export default {
                 }]
     
         }
-    }
+    },
+
 }
 </script>
 
@@ -66,5 +69,11 @@ export default {
 .date{
     color: gray;
     font-size: 12px;
+}
+
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 </style>
