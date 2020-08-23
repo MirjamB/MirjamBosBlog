@@ -1,8 +1,8 @@
 <template>
     <div class = "blog-teasers">
         <div  class = 'teaser' v-for="post in teaserPosts" v-bind:key="post">
-            <div class = "teaserImage" v-bind:style = "postImgStyle(post)">
-            </div>
+            <router-link :to="{path: '/blog/' + post.id}"  tag = "div" class = "teaserImage" v-bind:style = "postImgStyle(post)">
+            </router-link>
             <div class = "teaserText">
                 <div class = "inside">
                     <h1> <router-link :to="{path: '/blog/' + post.id}"> {{post.title}} </router-link> </h1>

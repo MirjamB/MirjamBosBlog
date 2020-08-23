@@ -10,6 +10,7 @@ export default {
         return{
             footerStyle: {
                 background: '#A8C3D6',
+                padding: '10px',
             }
         }
     },
@@ -40,8 +41,7 @@ export default {
 
 <style>
 #blog-footer {
-    padding-top: 10px;
-    height: 30px;
+    padding-top: 20px;
 }
 
 #copyright {

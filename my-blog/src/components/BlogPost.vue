@@ -35,7 +35,6 @@ export default {
 <style>
 .category-label {
     font-family: 'Open Sans';
-    font-size: 12px;
     color: gray;
     border: none;
     border-top: 8px double #8c8b8b;

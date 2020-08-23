@@ -22,6 +22,8 @@ export default {
 .navbar button{
     color:black;
     text-decoration: none;
+    font-size: 14px;
+    font-weight: 100;
     padding: 14px 20px;
     text-align: center;
     border: none;
