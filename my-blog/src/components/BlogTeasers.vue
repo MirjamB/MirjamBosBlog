@@ -5,7 +5,7 @@
             </div>
             <div class = "teaserText">
                 <div class = "inside">
-                    <h1> {{post.title}} </h1>
+                    <h1> <router-link :to="{path: '/blog/' + post.id}"> {{post.title}} </router-link> </h1>
                     <p> {{post.category}} </p>
                 </div>
             </div>

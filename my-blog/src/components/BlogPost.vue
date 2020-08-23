@@ -4,9 +4,9 @@
             <p class ="category"> {{post.category}} </p>
         </div>
         <div class="img-cont">
-            <img :src= "post.img" style = "width:100%" alt="loading...">
+            <router-link :to="{path: '/blog/' + id}"> <img :src= "post.img" style = "width:100%" alt="loading..."> </router-link>
         </div>
-        <h1> {{post.title}} </h1>
+        <h1> <router-link :to="{path: '/blog/' + id}"> {{post.title}} </router-link></h1>
         <p v-if= "short"> {{ post.summary }} </p>
         <p v-else> {{post.text}} </p>
         <br>
@@ -52,6 +52,16 @@ export default {
     text-decoration: none;
     color: #8c8b8b;
     font-size: 14px;
+}
+
+h1 a:hover{
+    text-decoration: none;
+    background-color: #EAEEEA;
+}
+
+h1 a:link, :visited, :active{
+    text-decoration: none;
+    color: black;
 }
 
 .date{

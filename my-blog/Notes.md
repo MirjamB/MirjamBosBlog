@@ -2,7 +2,7 @@
 
 ## Teaser images even groot maken
 ## Artikelpagina met enkel artikel
-link naar artikelpaginas
+## link naar artikelpaginas
 Categorie pagina's
 Kiezen van categorie in navigatiebalk
 Links naar categoriepagina in blogheader
