@@ -34,19 +34,16 @@ export default {
 
     methods: {
         loadHeader: function(){
-            if(this.$route.path == "/"){
-                this.title = 'Mirjam Bos',
-                this.subtitle = 'De blog over sport, lekker eten, creativiteit en meer van mij!',
-                this.headerStyle.background = '#A8C3D6',
-                this.imgSrc = require('@/assets/HeaderFrontPage.jpg')
-
-            } else if (this.$route.path == "/aboutme"){
+            if(this.$route.path == "/aboutme"){
                 this.title = 'Over mij',
                 this.subtitle = ''
                 this.headerStyle.background = '#ED7250',
                 this.imgSrc = require('@/assets/HeaderOverMij.jpg')
             } else {
-                this.title = '404 Page not found'
+                this.title = 'Mirjam Bos',
+                this.subtitle = 'De blog over sport, lekker eten, creativiteit en meer van mij!',
+                this.headerStyle.background = '#A8C3D6',
+                this.imgSrc = require('@/assets/HeaderFrontPage.jpg')
             }
         }
     },

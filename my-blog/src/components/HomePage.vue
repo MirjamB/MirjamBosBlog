@@ -1,8 +1,9 @@
 <template>
-    <div id="home">
+    <div class="home">
         <div class = "row">
           <div class = "main">
-            <blog-posts short="true"></blog-posts>
+            <blog-post :short="true" :id="length"></blog-post>
+            <blog-post :short="true" :id="length-1"></blog-post>
           </div>
           <div class = "side">
             <over-mij></over-mij>
@@ -19,12 +20,12 @@
 import BlogPost from './BlogPost.vue'
 import OverMij from './OverMijShort.vue'
 import BlogTeasers from './BlogTeasers.vue'
-
+import {posts} from '../posts'
 
 export default {
   name: 'Home',
   components: {
-    'blog-posts': BlogPost,
+    'blog-post': BlogPost,
     'over-mij': OverMij,
     'blog-teasers': BlogTeasers,
   },
@@ -32,12 +33,17 @@ export default {
     return {
       
     }
+  },
+  computed: {
+    length: function(){
+            return posts.length
+        },
   }
 }
 </script>
 
 <style>
-#home {
+.home {
   display: flex;
   justify-content: center;
 }

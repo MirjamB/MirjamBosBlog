@@ -1,19 +1,17 @@
 <template>
-    <div id="blog-posts">
-        <li v-for="post in bigPosts " v-bind:key="post">
-            <div class ="category-label">
-                <p class ="category"> {{post.category}} </p>
-            </div>
-            <div class="img-cont">
-                <img :src= "post.img" style = "width:100%" alt="loading...">
-            </div>
-            <h1> {{post.title}} </h1>
-            <p v-if='short'> {{ post.summary }} </p>
-            <p v-else> {{post.text}} </p>
-            <p class="date"> {{post.date}} </p>
-            <br>
-            
-        </li>
+    <div class="single-post">
+         <div class ="category-label">
+            <p class ="category"> {{post.category}} </p>
+        </div>
+        <div class="img-cont">
+            <img :src= "post.img" style = "width:100%" alt="loading...">
+        </div>
+        <h1> {{post.title}} </h1>
+        <p v-if= "short"> {{ post.summary }} </p>
+        <p v-else> {{post.text}} </p>
+        <br>
+        <p class="date"> {{post.date}} </p>
+        <br>
     </div>
 </template>
 
@@ -21,17 +19,14 @@
 import {posts} from '../posts'
 
 export default {
-    props: ['short'],
-    data() {
-        return {
-        }
-    },
+    props: ['short', 'id'],
     computed: {
-        blogPosts: function(){
-            return posts
-        },
-        bigPosts: function(){
-            return posts.slice(0,2)
+        post: function(){ 
+            let self = this;
+            return posts.filter(function(post){
+                console.log(self.id)
+                return post.id == self.id
+            })[0]
         }
     }
 }
@@ -62,11 +57,5 @@ export default {
 .date{
     color: gray;
     font-size: 12px;
-}
-
-li {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
 }
 </style>

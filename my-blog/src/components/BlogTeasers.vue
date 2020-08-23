@@ -2,7 +2,6 @@
     <div class = "blog-teasers">
         <div  class = 'teaser' v-for="post in teaserPosts" v-bind:key="post">
             <div class = "teaserImage" v-bind:style = "postImgStyle(post)">
-                <!-- <img class = "cover" :src = "post.img" alt="loading"> -->
             </div>
             <div class = "teaserText">
                 <div class = "inside">
@@ -25,7 +24,7 @@ export default {
             return posts
         },
         teaserPosts: function(){
-            return posts.slice(2,posts.length)
+            return posts.slice(0, posts.length-2).reverse()
         }
     },
     methods:{
