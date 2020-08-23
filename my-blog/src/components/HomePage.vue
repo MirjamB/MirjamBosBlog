@@ -7,13 +7,18 @@
           <div class = "side">
             <over-mij></over-mij>
           </div>
+          <div class ="category-label" style = "width: 100%">
+                <p class = "category"> Meer posts </p>
+          </div>
+          <blog-teasers></blog-teasers>
         </div>
     </div>
 </template>
 
 <script>
 import BlogPost from './BlogPost.vue'
-import OverMij from './OverMijShort'
+import OverMij from './OverMijShort.vue'
+import BlogTeasers from './BlogTeasers.vue'
 
 
 export default {
@@ -21,7 +26,13 @@ export default {
   components: {
     'blog-posts': BlogPost,
     'over-mij': OverMij,
+    'blog-teasers': BlogTeasers,
   },
+  data (){
+    return {
+      
+    }
+  }
 }
 </script>
 
