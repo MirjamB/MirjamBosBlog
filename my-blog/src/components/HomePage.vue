@@ -11,7 +11,11 @@
           <div class ="category-label" style = "width: 100%">
                 <p class = "category"> Meer posts </p>
           </div>
-          <blog-teasers></blog-teasers>
+          <div class="blog-teasers">
+          <div class = "teaser" v-for="post in posts" v-bind:key="post">
+            <blog-teaser :id="post.id"></blog-teaser>
+          </div>
+          </div>
         </div>
     </div>
 </template>
@@ -19,7 +23,7 @@
 <script>
 import BlogPost from './BlogPost.vue'
 import OverMij from './OverMijShort.vue'
-import BlogTeasers from './BlogTeasers.vue'
+import BlogTeaser from './BlogTeaser.vue'
 import {posts} from '../posts'
 
 export default {
@@ -27,7 +31,7 @@ export default {
   components: {
     'blog-post': BlogPost,
     'over-mij': OverMij,
-    'blog-teasers': BlogTeasers,
+    'blog-teaser': BlogTeaser,
   },
   data (){
     return {
@@ -36,8 +40,11 @@ export default {
   },
   computed: {
     length: function(){
-            return posts.length
-        },
+      return posts.length
+      },
+    posts: function(){
+      return posts.slice(0,length-2).reverse()
+    }
   }
 }
 </script>
@@ -64,6 +71,13 @@ export default {
     flex: 30%;
     background-color: white;
     padding: 20px;
+}
+
+.blog-teasers {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width:100%;
 }
 
 /* Adjustmentsfor small screens */

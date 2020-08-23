@@ -1,7 +1,7 @@
 <template>
     <div class="single-post">
          <div class ="category-label">
-            <p class ="category"> {{post.category}} </p>
+            <p class ="category"> <router-link :to ="{path: '/blogs/' + post.category}">{{post.category}} </router-link></p>
         </div>
         <div class="img-cont">
             <router-link :to="{path: '/blog/' + id}"> <img :src= "post.img" style = "width:100%" alt="loading..."> </router-link>
@@ -58,7 +58,17 @@ h1 a:hover{
     background-color: #EAEEEA;
 }
 
+p a:hover{
+    text-decoration: none;
+    background-color: #EAEEEA;
+}
+
 h1 a:link, :visited, :active{
+    text-decoration: none;
+    color: black;
+}
+
+p a:link, :visited, :active{
     text-decoration: none;
     color: black;
 }

@@ -1,7 +1,7 @@
 <template>
     <div class="navbar">
         <button> <router-link to="/"> Home </router-link></button>
-        <button> Categoriën </button>
+        <button> <router-link to="/blogs/Alles"> Categorieën </router-link></button>
         <button> <router-link to="/aboutme"> Over mij </router-link></button>
         <button> Contact </button>
     </div>
