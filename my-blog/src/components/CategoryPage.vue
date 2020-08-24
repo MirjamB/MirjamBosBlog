@@ -2,7 +2,7 @@
     <div class='home'>
     <div class='row'>
     <div class="blog-teasers">
-          <div class = "teaser" v-for="post in filteredPosts" v-bind:key="post">
+          <div class = "teaser" v-for="post in filteredPosts" v-bind:key="post.id">
             <blog-teaser :id= post.id></blog-teaser>
           </div>
     </div>
@@ -15,11 +15,6 @@ import {posts} from '../posts'
 import blogTeaser from './BlogTeaser'
 
 export default {
-    data() {
-        return {
-        category: this.$route.params.category,
-        }
-    },
     computed: {
         filteredPosts: function(){
             var self = this;
@@ -31,6 +26,9 @@ export default {
                     return post.category === self.category;
                 });
             }
+        },
+        category: function(){
+            return this.$route.params.category
         }
     },
     components: {

@@ -4,12 +4,36 @@
         <button> <router-link to="/blogs/Alles"> Categorieën </router-link></button>
         <button> <router-link to="/aboutme"> Over mij </router-link></button>
         <button> Contact </button>
+        <dropdown>
+            <button class="toggle" v-on:click = "showOptions">
+                Click to open dropdown
+            </button>
+            <div v-if="visible" class = "menu">
+                    <button> <router-link class="dropdown-item" to="/blogs/Alles"> Alles </router-link> </button>
+                    <button> <router-link class="dropdown-item" to="/blogs/Hardlopen"> Hardlopen </router-link> </button>
+                    <button> <router-link class="dropdown-item" to="/blogs/Boeken"> Boeken </router-link> </button>                 
+            </div>
+        </dropdown>
     </div>
 </template>
 
 <script>
+import DropdownMenu from '@innologica/vue-dropdown-menu'
+
 export default {
-    
+    data(){
+        return {
+            visible: false
+        }
+    },
+    components: {
+        'dropdown': DropdownMenu
+    },
+    methods: {
+        showOptions: function(){
+            this.visible = !this.visible;
+        }
+    }
 }
 
 </script>
@@ -38,4 +62,13 @@ export default {
     text-decoration: none;
     color: black;
 }
+
+.menu {
+    position: absolute;
+    background-color: #EAEEEA;
+    display:flex;
+    flex-direction:column;
+    width: 185px;
+}
+
 </style>
