@@ -1,19 +1,19 @@
 <template>
     <div class="navbar">
         <button> <router-link to="/"> Home </router-link></button>
-        <button> <router-link to="/blogs/Alles"> Categorieën </router-link></button>
         <button> <router-link to="/aboutme"> Over mij </router-link></button>
-        <button> Contact </button>
         <dropdown>
             <button class="toggle" v-on:click = "showOptions">
-                Click to open dropdown
+                Categorieën
             </button>
             <div v-if="visible" class = "menu">
-                    <button> <router-link class="dropdown-item" to="/blogs/Alles"> Alles </router-link> </button>
-                    <button> <router-link class="dropdown-item" to="/blogs/Hardlopen"> Hardlopen </router-link> </button>
-                    <button> <router-link class="dropdown-item" to="/blogs/Boeken"> Boeken </router-link> </button>                 
+                    <button class="dropdown-item" v-on:click = "showOptions"> <router-link to="/blogs/Alles"> Alles </router-link> </button>
+                    <button class="dropdown-item" v-on:click = "showOptions"> <router-link to="/blogs/Hardlopen"> Hardlopen </router-link> </button>
+                    <button class="dropdown-item" v-on:click = "showOptions"> <router-link to="/blogs/Boeken"> Boeken </router-link> </button>                 
             </div>
         </dropdown>
+        <button> Contact </button>
+        
     </div>
 </template>
 
@@ -68,7 +68,8 @@ export default {
     background-color: #EAEEEA;
     display:flex;
     flex-direction:column;
-    width: 185px;
+    width: 115px;
+    z-index: 1;
 }
 
 </style>

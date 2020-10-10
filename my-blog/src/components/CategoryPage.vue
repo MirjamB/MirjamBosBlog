@@ -36,5 +36,3 @@ export default {
     }
 }
 </script>
-
-<!-- hier het filter maken -->

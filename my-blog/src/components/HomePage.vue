@@ -59,6 +59,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   max-width: 100%;
+
 }
 
 .main{
@@ -91,7 +92,7 @@ export default {
  /* Adjustments for wide screens */
 @media screen and (min-width: 992px) {
     .row {
-        max-width: 992px;
+        width: 900px;
     }
 }
 </style>
